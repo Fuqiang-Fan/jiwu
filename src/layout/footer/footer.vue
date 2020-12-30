@@ -29,16 +29,16 @@
       </el-row>
     </div> -->
     <div class="footer__conyfiv">
-      <div>Copyright © 2020 <el-link :underline="false">yanxuanhaofang.com</el-link> 深圳市严选好房网络技术有限公司 ALL Rights Reserved</div>
+      <div>Copyright © 2020 <el-link :underline="false">www.yanxuanhaofang.com</el-link> 北京聚米房地产营销策划有限公司 ALL Rights Reserved</div>
       <div>
-        <el-link :underline="false">ICP备案(粤ICP备11045667号)</el-link>
+        <!--<el-link :underline="false">ICP备案(粤ICP备11045667号)</el-link>
         <el-link :underline="false">增值电信业务经营许可证</el-link>
         <el-link :underline="false">房地产经纪机构备案</el-link>
         <el-link :underline="false">工商网监</el-link>
         <el-link :underline="false">中国电子认证服务产业联盟</el-link>
         <el-link :underline="false">粤公网安备  44030502001914号
           <el-image src="http://www.beian.gov.cn/img/ghs.png"></el-image>
-        </el-link>
+        </el-link>-->
       </div>
     </div>
   </div>

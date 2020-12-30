@@ -5,7 +5,11 @@ import CustomTable from '@/components/customTable.vue';
 import { Project } from '@/api';
 
 const info = [
-  { label: '单价', value: 'price' },
+  { label: '单价',
+    getValue: (val) => {
+      return val.price ? val.price + '元/平米' : '暂无';
+    }
+  },
   { label: '开盘时间', value: 'openDate' },
   { label: '交房时间', value: 'deliveryDate' },
 
@@ -14,8 +18,16 @@ const info = [
   { label: '装修状况', value: 'decoration' },
 
   { label: '建筑形式', value: 'constructType' },
-  { label: '规划面积', value: 'plannedArea' },
-  { label: '建筑面积', value: 'floorArea' },
+  { label: '规划面积',
+    getValue: (val) => {
+      return val.plannedArea ? val.plannedArea + '平米' : '暂无';
+    }
+  },
+  { label: '建筑面积',
+    getValue: (val) => {
+      return val.floorArea ? val.floorArea + '平米' : '暂无';
+    }
+  },
 
   {
     label: '主力户型',
@@ -27,15 +39,38 @@ const info = [
         : '暂无数据';
     }
   },
-  { label: '容 积 率', value: 'plotRatio' },
-  { label: '绿 化 率', value: 'greeningRate' },
+  { label: '容 积 率',
+    getValue: (val) => {
+      return val.plotRatio ? val.plotRatio*100 + '%' : '暂无';
+    }
+  },
+  { label: '绿 化 率',
+    getValue: (val) => {
+      return val.greeningRate ? val.greeningRate*100 + '%' : '暂无';
+    }
+  },
 
   { label: '房屋产权', value: 'propertyRightType' },
-  { label: '规划户数', value: 'plannedHouseholds' },
-  { label: '车 位 数', value: 'undergroundParkSpaceNum' },
-
-  { label: '最大栋距', value: 'maxSpace' },
-  { label: '最小栋距', value: 'minSpace' },
+  { label: '规划户数',
+    getValue: (val) => {
+      return val.plannedHouseholds ? val.plannedHouseholds + '户' : '暂无';
+    }
+  },
+  { label: '车 位 数',
+    getValue: (val) => {
+      return val.undergroundParkSpaceNum ? val.undergroundParkSpaceNum + '个' : '暂无';
+    }
+  },
+  { label: '最大栋距',
+    getValue: (val) => {
+      return val.maxSpace ? val.maxSpace + '米' : '暂无';
+    }
+  },
+  { label: '最小栋距',
+    getValue: (val) => {
+      return val.minSpace ? val.minSpace + '米' : '暂无';
+    }
+  },
   { label: '楼盘朝向', value: 'orientations' },
 
   { label: '物业公司', value: 'propertyCompany' },
@@ -49,7 +84,11 @@ const info = [
         : '暂无数据';
     }
   },
-  { label: '物 业 费', value: 'propertyFeePrice' },
+  { label: '物 业 费',
+    getValue: (val) => {
+      return val.propertyFeePrice ? val.propertyFeePrice + '元/平米' : '暂无';
+    }
+  },
 
   { label: '开 发 商', value: 'developerName' },
   { label: '销售代理', value: 'saleProxy' },
@@ -59,7 +98,11 @@ const info = [
   { label: '售楼处地址', value: 'salesOfficeSite' },
   { label: '建筑设计单位', value: 'designCompany' },
 
-  { label: '栋数', value: 'buildingNum' },
+  { label: '栋数',
+    getValue: (val) => {
+      return val.buildingNum ? val.buildingNum + '栋' : '暂无';
+    }
+  },
   { label: '施工单位', value: 'constructionCompany' }
 ];
 

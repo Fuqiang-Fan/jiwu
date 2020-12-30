@@ -1,7 +1,7 @@
 const data = {
   tel: '400-157-6007',
   net: 'www.yanxuanhaofang.com',
-  local: '廊坊市广阳区万达广场B座1-705室',
+  local: '北京市平谷区刘家店镇银店大街1号328室',
   info: [
     {
       id: 100001,
